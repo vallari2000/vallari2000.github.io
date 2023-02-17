@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+:root{
+    --mainTextColor-light:#000;
+    --secondaryTextColor-light:rgb(51 51 51);
+    --mainLinkColor-light:#0da2b8;
+    --mainBorderColor-light:rgb(218, 218, 218);
+    --mainBgColor-light:rgb(249, 250,251);
+
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --mainLinkColor-dark:rgb(30, 190,214);
+    --mainBorderColor-dark:#2b3031;
+    --mainBgColor-dark:#131415;
+    
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);
+
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+    
+}
+
+body{
+    background-color: var(--mainBgColor);            
+}
+
+p, span, li{
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li{
+    line-height: 1.9em;
+}
+
+#container--main{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.section--page{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.section--page1{
+  padding-top: 1em;
+  padding-bottom: 15em;
+}
+
+#wrapper--hero{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#bio, a{
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+#user-name{
+    font-size: 48px;
+    line-height: 1em;
+}
+
+#profile-pic{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#email{
+    color: var(--mainTextColor);
+}
+
+#socials--list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#socials--list a{
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+#socials--list a:hover{
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+
+#qualifications--list{
+    list-style: none;
+}
+
+#wrapper--techstack__items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7em;
+    font-size: 1.2em;
+}
+.card-front__heading {
+    font-size: 1.3rem;
+    margin-top: .25rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+  /* Main heading for inside page */
+  .inside-page__heading { 
+    /* padding-bottom: 1rem;  */
+    width: 100%;
+  }
+  
+  /* Mixed */
+  
+  /* For both inside page's main heading and 'view me' text on card front cover */
+  .inside-page__heading,
+  .card-front__text-view {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: .2rem;
+  }
+  
+  .inside-page__heading--city,
+  .card-front__text-view--city { color: #52203a; }
+  
+  .inside-page__heading--ski,
+  .card-front__text-view--ski { color: #10292e; }
+  
+  .inside-page__heading--beach,
+  .card-front__text-view--beach { color: #3b140c; }
+  
+  .inside-page__heading--camping,
+  .card-front__text-view--camping { color: #0e3629; }
+  
+  /* Front cover */
+  
+  .card-front__tp { color: #fafbfa; }
+  
+  /* For pricing text on card front cover */
+  .card-front__text-price {
+    font-size: 1.2rem;
+    margin-top: -.2rem;
+  }
+  
+  /* Back cover */
+  
+  /* For inside page's body text */
+  .inside-page__text {
+    color: #333;
+  }
+  
+  /* Icons ===========================================*/
+  
+  .card-front__icon {
+    fill: #fafbfa;
+    font-size: 3vw;
+    height: 3.25rem;
+    margin-top: -.5rem;
+    width: 3.25rem;
+  }
+  
+  /* Buttons =================================================*/
+  
+  .inside-page__btn {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    overflow: hidden;
+    padding: 2rem 0.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: all .3s ease;
+    width: 90%;
+    z-index: 10;
+    text-align: center;
+  }
+  
+  .inside-page__btn::before { 
+    content: "";
+    margin: auto;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleY(0);
+    transition: all .3s ease;
+    
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .inside-page__btn--city { 
+    border-color: #faa2ce;
+    color: #faa2ce;
+   
+  }
+  
+  .inside-page__btn--city::before { 
+    background-color: #69153f;
+  }
+  
+  .inside-page__btn--ski { 
+    border-color: #279eb2;
+    color: #279eb2;
+    margin-top: 4rem;
+  }
+  
+  .inside-page__btn--ski::before { 
+    background-color: #193e44;
+  }
+  
+  .inside-page__btn--beach { 
+    border-color: #fa7f67;
+    color: #fa7f67;
+    margin-top: 4rem;
+  }
+  
+  .inside-page__btn--beach::before { 
+    background-color: #6b2011;
+  }
+  
+  .inside-page__btn--camping { 
+    border-color: #00b97d;
+    color: #00b97d;
+    margin-top: 4rem;
+  }
+  
+  .inside-page__btn--camping::before { 
+    background-color: #0a4632;
+  }
+  
+  .inside-page__btn:hover { 
+    color: #fafbfa;
+  }
+  
+  .inside-page__btn:hover::before { 
+    transform: scaleY(1);
+  }
+  
+  /* Layout Structure=========================================*/
+  
+  .main {
+    background: linear-gradient(
+      to bottom right,
+      #eee8dd,
+      #e3d9c6
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Container to hold all cards in one place */
+  .card-area {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  
+  /* Card ============================================*/
+  
+  /* Area to hold an individual card */
+  .card-section {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* A container to hold the flip card and the inside page */
+  .card {
+    background-color: rgba(0,0,0, .05);
+    box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+    height: 15rem;
+    position: relative;
+    transition: all 1s ease;
+    width: 15rem;
+  }
+  
+  /* Flip card - covering both the front and inside front page */
+  
+  /* An outer container to hold the flip card. This excludes the inside page */
+  .flip-card {
+    height: 15rem;
+    perspective: 100rem;
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    visibility: hidden;
+    width: 15rem;
+    z-index: 100;
+  }
+  
+  /* The outer container's visibility is set to hidden. This is to make everything within the container NOT set to hidden  */
+  /* This is done so content in the inside page can be selected */
+  .flip-card > * {
+    visibility: visible;
+  }
+  
+  /* An inner container to hold the flip card. This excludes the inside page */
+  .flip-card__container {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    width: 100%;
+  }
+  
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Styling for the front side of the flip card */
+  
+  /* container for the front side */
+  .card-front {
+    background-color: #fafbfa;
+    height: 15rem;
+    width: 15rem;
+    
+  }
+  
+  /* Front side's top section */
+  .card-front__tp {
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+    display: flex;
+    flex-direction: column;
+    height: 13rem;
+    justify-content: center;
+    padding: .75rem;
+   
+  }
+  
+  .card-front__tp--city {
+    background: linear-gradient(
+      to bottom,
+      #69153f,
+      #664153
+    );
+    
+  }
+  
+  .card-front__tp--ski {
+    background: linear-gradient(
+      to bottom,
+      #193e44,
+      #1f7180
+    );
+  }
+  
+  .card-front__tp--beach {
+    background: linear-gradient(
+      to bottom,
+      #6b2011,
+      #7a3020
+    );
+  }
+  
+  .card-front__tp--camping {
+    background: linear-gradient(
+      to bottom,
+      #0a4632,
+      #157456
+    );
+  }
+  
+  /* Front card's bottom section */
+  .card-front__bt {
+    align-items: center;
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Styling for the back side of the flip card */
+  
+  .card-back {
+    background-color: #fafbfa;
+    transform: rotateY(180deg);
+  }
+  
+  /* Specifically targeting the <video> element */
+  .video__container {
+    clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* Inside page */
+  
+  .inside-page {
+    background-color: #fafbfa;
+    box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    transition: all 1s ease;
+    width: 15rem;
+    z-index: 1;
+  }
+  
+  .inside-page__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center; 
+    width: 100%;
+  }
+  
+  /* Functionality ====================================*/
+  
+  /* This is to keep the card centered (within its container) when opened */
+  .card:hover {
+    box-shadow:
+    -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+    width: 30rem;
+  }
+  
+  /* When the card is hovered, the flip card container will rotate */
+  .card:hover .flip-card__container {
+    transform: rotateY(-180deg);
+  }
+  
+  /* When the card is hovered, the shadow on the inside page will shrink to the left */
+  .card:hover .inside-page {
+    box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+  }
+  
+  /* Footer ====================================*/
+  
+  .footer {
+    background-color: #333;
+     margin-top: 3rem;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  
+  .footer-text {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.box1 {
+    color: var(--grayishBlue);
+}
+
+.box1 {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 20px;
+    margin: 20px;  
+}
+
+
+
+@media (max-width: 450px) {
+    .box1 {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box1 {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    border-top: 3px solid var(--orange);
+}
+
+/* h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+} */
+
+
+@media (min-width: 1050px) {
+    .row1-container1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items: center;
+    }
+    
+    .row2-container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down1 {
+        position: relative;
+        top: 50px;
+    }
+    .box1 {
+        width: 40%;
+     
+    }
+    .header1 p {
+        width: 30%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.timeline{
+  width:800px;
+  background-color:#072736;
+  color:#fff;
+  padding:30px 20px;
+  box-shadow:0px 0px 10px rgba(0,0,0,.5);
+}
+.timeline ul{
+  list-style-type:none;
+  border-left:2px solid #094a68;
+  padding:10px 5px;
+}
+.timeline ul li{
+  padding:20px 20px;
+  position:relative;
+  cursor:pointer;
+  transition:.5s;
+}
+.timeline ul li span{
+  display:inline-block;
+  background-color:#1685b8;
+  border-radius:25px;
+  padding:2px 5px;
+  font-size:15px;
+  text-align:center;
+}
+.timeline ul li .content h3{
+  color:#34ace0;
+  font-size:17px;
+  padding-top:5px;
+}
+.timeline ul li .content p{
+  padding:5px 0px 15px 0px;
+  font-size:15px;
+}
+.timeline ul li:before{
+  position:absolute;
+  content:'';
+  width:10px;
+  height:10px;
+  background-color:#34ace0;
+  border-radius:50%;
+  left:-11px;
+  top:28px;
+  transition:.5s;
+}
+.timeline ul li:hover{
+  background-color:#071f2a;
+}
+.timeline ul li:hover:before{
+  background-color:#0F0;
+  box-shadow:0px 0px 10px 2px #0F0;
+}
+@media (max-width:300px){
+  .timeline{
+    width:100%;
+    padding:30px 5px 30px 10px;
+  }
+  .timeline ul li .content h3{
+    color:#34ace0;
+    font-size:15px;
+  }
+
+}
+
