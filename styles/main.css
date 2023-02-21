@@ -109,7 +109,12 @@ li{
     column-gap: 1em;
     flex-wrap: wrap;
 }
-
+#pages--link{
+  display: flex;
+    justify-content:flex-start;
+    column-gap: 2em;
+    flex-wrap: wrap;
+}
 #socials--list a{
     font-weight: 300;
     color: var(--secondaryTextColor);
